@@ -33,7 +33,7 @@ export class MoonsController extends BaseController {
 
   async getSpeciesByMoon(req, res, next) {
     try {
-      const species = await multispeciesService.getAll({ speciesId: req.params.id })
+      const species = await multispeciesService.getAll({ moonId: req.params.id })
       res.send(species)
     } catch (error) {
       next(error)

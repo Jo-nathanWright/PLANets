@@ -6,14 +6,14 @@ const Moon = new Schema(
   {
     color: { type: String, required: true },
     size: { type: Number, required: true },
-    speciesId: { type: ObjectId, ref: 'Species' }
+    planetId: { type: ObjectId, ref: 'Planet' }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )
 
-Moon.virtual('species', {
-  localField: 'speciesId',
-  ref: 'Species',
+Moon.virtual('planet', {
+  localField: 'planetId',
+  ref: 'Planet',
   foreignField: '_id',
   justOne: true
 })
