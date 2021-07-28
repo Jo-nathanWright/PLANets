@@ -7,7 +7,7 @@ const Star = new Schema(
     size: { type: Number, required: true },
     brightness: { type: String, enum: ['Blinding', 'Bright', 'Dull'], required: true },
     heat: { type: Number, required: true },
-    galaxyId: { type: ObjectId, ref: 'Galaxy' }
+    galaxyId: { type: ObjectId, ref: 'Galaxy', required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )

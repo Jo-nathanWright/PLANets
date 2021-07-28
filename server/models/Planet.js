@@ -8,7 +8,7 @@ const Planet = new Schema(
     type: { type: String, enum: ['gas', 'solid', 'liquid'], required: true },
     size: { type: Number, required: true },
     life: { type: Boolean, required: true },
-    starId: { type: ObjectId, ref: 'Star' }
+    starId: { type: ObjectId, ref: 'Star', required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )

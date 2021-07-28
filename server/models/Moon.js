@@ -6,7 +6,7 @@ const Moon = new Schema(
   {
     color: { type: String, required: true },
     size: { type: Number, required: true },
-    planetId: { type: ObjectId, ref: 'Planet' }
+    planetId: { type: ObjectId, ref: 'Planet', required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )
