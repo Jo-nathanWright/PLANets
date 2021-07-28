@@ -11,4 +11,11 @@ const Moon = new Schema(
   { timestamps: true, toJSON: { virtuals: true } }
 )
 
+Moon.virtual('species', {
+  localField: 'speciesId',
+  ref: 'Species',
+  foreignField: '_id',
+  justOne: true
+})
+
 export default Moon
